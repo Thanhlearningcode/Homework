@@ -23,13 +23,14 @@ int main(void)
         ->setDataBits(&builder, 8)
         ->build(&builder);
 
-    UART1_Config(config);
-    UART1_SendString("UART Ready1111!\r\n");
+    UART2_Config(config);
+  //  UART1_SendString("UART Ready1111!\r\n");
          // Print the configured UART parameters
           while(1) {
-    char c = UART1_ReceiveChar();  // Nhận ký tự từ terminal
-    UART1_SendChar(c);             // Phản hồi lại
+                UART2_SendString("Hello,My name is Thanh!\r\n");
+   // char c = UART2_ReceiveChar();  // Nhận ký tự từ terminal
+  //  UART2_SendChar(c);             // Phản hồi lại
      //   GPIOA_Pin5_Toggle();
-        delay(1000000);
+        delay(3000000);
     }
 }

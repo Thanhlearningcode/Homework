@@ -29,6 +29,7 @@ Hoặc thủ công:
 ```bash
 st-flash write build/STM32F411.bin 0x8000000
 ```
+![alt text](image-1.png)
 
 ---
 

@@ -1,10 +1,18 @@
 ===============================
-Build started at: 2025-05-27 15:59:33
+Build started at: 2025-05-27 19:47:19
 ===============================
 
-make: Nothing to be done for 'all'.
+[Compiling] Src/main.c
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -DSTM32F411xE -O2 -g -Wall -ffunction-sections -fdata-sections -IInc -ICMSIS/Device/ST/STM32F4xx/Include -ICMSIS/Include -c Src/main.c -o build/main.o
+[Linking] build/STM32F411.elf
+arm-none-eabi-gcc -TStartup/STM32F411VETX_FLASH.ld -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wl,--gc-sections -Wl,-Map=build/STM32F411.map build/Gpio.o build/main.o build/Uart_Builder.o build/Uart_Driver.o build/system_stm32f4xx.o build/startup_stm32f411vetx.o -o build/STM32F411.elf
+arm-none-eabi-size build/STM32F411.elf
+   text	   data	    bss	    dec	    hex	filename
+   1556	   1072	   1568	   4196	   1064	build/STM32F411.elf
+[Objcopy] build/STM32F411.bin
+arm-none-eabi-objcopy -O binary build/STM32F411.elf build/STM32F411.bin
 
 ✅ Build completed successfully!
-🕒 Completed at: 2025-05-27 15:59:33
+🕒 Completed at: 2025-05-27 19:47:19
 Build started by: THANH
 ===============================
