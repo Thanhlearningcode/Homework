@@ -30,7 +30,7 @@ int _write(int file, char *ptr, int len) {
     // Ví dụ: gọi hàm UART1_SendData(ptr, len);
     for (int i = 0; i < len; i++) {
         // Gửi từng ký tự ra UART (bạn tự implement)
-        UART1_SendChar(ptr[i]); // bạn cần có hàm này trong UART driver
+        UART2_SendChar(ptr[i]); // bạn cần có hàm này trong UART driver
     }
     return len;
 }

@@ -32,10 +32,10 @@ void SensorManager_CollectData(SensorManager* sm)
             sm->AdcValues[i] = ADC_ReadChannel(i + 1);
         }
 
-        UART1_Printf("Collecting data from %d sensors...\r\n", sm->SensorCout);
+        UART2_Printf("Collecting data from %d sensors...\r\n", sm->SensorCout);
         for (int i = 0; i < sm->SensorCout; ++i)
         {
-            UART1_Printf("Sensor[%d] ADC value: %u\r\n", i, sm->AdcValues[i]);
+            UART2_Printf("Sensor[%d] ADC value: %u\r\n", i, sm->AdcValues[i]);
         }
     }
 }
@@ -44,6 +44,6 @@ void SensorManager_UploadToDatabase(SensorManager* sm)
 {
     if (sm != NULL) 
     {
-        UART1_SendString("Uploading sensor data to database...\r\n");
+        UART2_SendString("Uploading sensor data to database...\r\n");
     }
 }

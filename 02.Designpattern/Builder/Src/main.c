@@ -26,10 +26,11 @@ int main(void)
     UART2_Config(config);
   //  UART1_SendString("UART Ready1111!\r\n");
          // Print the configured UART parameters
-          while(1) {
-                UART2_SendString("Hello,My name is Thanh!\r\n");
-   // char c = UART2_ReceiveChar();  // Nhận ký tự từ terminal
-  //  UART2_SendChar(c);             // Phản hồi lại
+    while(1) 
+    {
+     UART2_SendString("Hello,My name is Thanh!\r\n");
+    // char c = UART2_ReceiveChar();  // Nhận ký tự từ terminal
+    //  UART2_SendChar(c);             // Phản hồi lại
      //   GPIOA_Pin5_Toggle();
         delay(3000000);
     }
