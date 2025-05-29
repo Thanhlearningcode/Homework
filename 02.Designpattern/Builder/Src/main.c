@@ -1,5 +1,6 @@
 #include "Gpio.h"
 #include "Uart_Driver.h"
+#include "Uart_Builder.h"
 #include <stdio.h>
 
 void delay(volatile uint32_t count) {
@@ -17,10 +18,10 @@ int main(void)
    
 
     Uart_Config_t config = builder
-        .setBaudrate(&builder, 115200)
-        ->setParity(&builder, 0)
-        ->setStopBits(&builder, 1)
-        ->setDataBits(&builder, 8)
+        .setBaudrate(&builder, UART_BAUDRATE_115200)
+        ->setParity(&builder, UART_PARITY_NONE)
+        ->setStopBits(&builder, UART_STOPBITS_1)
+        ->setDataBits(&builder, UART_DATABITS_8)
         ->build(&builder);
 
     UART2_Config(config);

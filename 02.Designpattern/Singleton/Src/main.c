@@ -1,18 +1,21 @@
 #include "Uart_Driver.h"
+#include "Uart_Builder.h"
 #include "SensorManager_Singleton.h"
 #include "Adc.h"
+
+
 int main(void)
 {   
     Uart_Builder builder = UART_Builder_Init();
     Uart_Config_t config = builder
-        .setBaudrate(&builder, 115200)
-        ->setParity(&builder, 0)
-        ->setStopBits(&builder, 1)
-        ->setDataBits(&builder, 8)
+        .setBaudrate(&builder, UART_BAUDRATE_115200)
+        ->setParity(&builder, UART_PARITY_NONE)
+        ->setStopBits(&builder, UART_STOPBITS_1)
+        ->setDataBits(&builder, UART_DATABITS_8)
         ->build(&builder);
 
     UART2_Config(config);
-            UART2_SendString("Hello,My name is Thanh!\r\n");
+    UART2_SendString("Hello,My name is Thanh!\r\n");
 
 
 

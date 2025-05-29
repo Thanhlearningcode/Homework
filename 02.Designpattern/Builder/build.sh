@@ -16,13 +16,17 @@ mkdir -p "$LOG_DIR"
 
 # === Start logging ===
 echo "===============================" > "$LOG_FILE"
-echo "Build started at: $TIME_START" >>  "$LOG_FILE"
+echo "Build started at: $TIME_START" >> "$LOG_FILE"
 echo "===============================" >> "$LOG_FILE"
 echo "" >> "$LOG_FILE"
 
-# === Run build ===
+# === Run build and capture exit status ===
 echo "🔨 Running make..."
-if make all 2>&1 | tee -a "$LOG_FILE"; then
+make all 2>&1 | tee -a "$LOG_FILE"
+MAKE_EXIT_CODE=${PIPESTATUS[0]}  # Bắt mã lỗi từ lệnh make (dù tee luôn thành công)
+
+# === Check result ===
+if [ $MAKE_EXIT_CODE -eq 0 ]; then
     echo "" | tee -a "$LOG_FILE"
     echo "✅ Build completed successfully!" | tee -a "$LOG_FILE"
     echo "🕒 Completed at: $(date '+%Y-%m-%d %H:%M:%S')" | tee -a "$LOG_FILE"

@@ -2,6 +2,36 @@
 #define _UART_BUILDER_H_
 
 #include <stdint.h>
+
+typedef enum 
+{
+    UART_BAUDRATE_9600    = 9600,
+    UART_BAUDRATE_19200   = 19200,
+    UART_BAUDRATE_38400   = 38400,
+    UART_BAUDRATE_57600   = 57600,
+    UART_BAUDRATE_115200  = 115200,
+    UART_BAUDRATE_230400  = 230400,
+    UART_BAUDRATE_460800  = 460800,
+    UART_BAUDRATE_921600  = 921600
+} UART_Baudrate_t;
+typedef enum 
+{
+    UART_PARITY_NONE = 0,
+    UART_PARITY_ODD  = 1,
+    UART_PARITY_EVEN = 2
+} UART_Parity_t;
+
+typedef enum 
+{
+    UART_STOPBITS_1 = 1,
+    UART_STOPBITS_2 = 2
+} UART_StopBits_t;
+
+typedef enum 
+{
+    UART_DATABITS_8 = 8,
+    UART_DATABITS_9 = 9
+} UART_DataBits_t;
 /* UART Configuration Structure */ 
 typedef struct 
 {

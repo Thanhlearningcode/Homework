@@ -467,31 +467,31 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a
  .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__call_atexit.o)
  .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtend.o
 
-.debug_info     0x0000000000000000     0x3431
+.debug_info     0x0000000000000000     0x357d
  .debug_info    0x0000000000000000      0x371 build/Gpio.o
- .debug_info    0x0000000000000371      0x2fc build/main.o
- .debug_info    0x000000000000066d      0x2c1 build/Uart_Builder.o
- .debug_info    0x000000000000092e      0x58b build/Uart_Driver.o
- .debug_info    0x0000000000000eb9      0x545 build/system_stm32f4xx.o
- .debug_info    0x00000000000013fe      0x100 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-atexit.o)
- .debug_info    0x00000000000014fe      0x102 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-fini.o)
- .debug_info    0x0000000000001600      0x92a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-impure.o)
- .debug_info    0x0000000000001f2a      0x11a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
- .debug_info    0x0000000000002044      0x9b0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__atexit.o)
- .debug_info    0x00000000000029f4      0xa3d /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__call_atexit.o)
+ .debug_info    0x0000000000000371      0x3a2 build/main.o
+ .debug_info    0x0000000000000713      0x367 build/Uart_Builder.o
+ .debug_info    0x0000000000000a7a      0x58b build/Uart_Driver.o
+ .debug_info    0x0000000000001005      0x545 build/system_stm32f4xx.o
+ .debug_info    0x000000000000154a      0x100 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-atexit.o)
+ .debug_info    0x000000000000164a      0x102 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-fini.o)
+ .debug_info    0x000000000000174c      0x92a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-impure.o)
+ .debug_info    0x0000000000002076      0x11a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
+ .debug_info    0x0000000000002190      0x9b0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__atexit.o)
+ .debug_info    0x0000000000002b40      0xa3d /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__call_atexit.o)
 
-.debug_abbrev   0x0000000000000000      0xf28
+.debug_abbrev   0x0000000000000000      0xf84
  .debug_abbrev  0x0000000000000000       0xff build/Gpio.o
- .debug_abbrev  0x00000000000000ff      0x168 build/main.o
- .debug_abbrev  0x0000000000000267      0x110 build/Uart_Builder.o
- .debug_abbrev  0x0000000000000377      0x19d build/Uart_Driver.o
- .debug_abbrev  0x0000000000000514      0x119 build/system_stm32f4xx.o
- .debug_abbrev  0x000000000000062d       0xb7 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-atexit.o)
- .debug_abbrev  0x00000000000006e4       0xcf /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-fini.o)
- .debug_abbrev  0x00000000000007b3      0x1b8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-impure.o)
- .debug_abbrev  0x000000000000096b       0xcc /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
- .debug_abbrev  0x0000000000000a37      0x23f /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__atexit.o)
- .debug_abbrev  0x0000000000000c76      0x2b2 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__call_atexit.o)
+ .debug_abbrev  0x00000000000000ff      0x196 build/main.o
+ .debug_abbrev  0x0000000000000295      0x13e build/Uart_Builder.o
+ .debug_abbrev  0x00000000000003d3      0x19d build/Uart_Driver.o
+ .debug_abbrev  0x0000000000000570      0x119 build/system_stm32f4xx.o
+ .debug_abbrev  0x0000000000000689       0xb7 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-atexit.o)
+ .debug_abbrev  0x0000000000000740       0xcf /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-fini.o)
+ .debug_abbrev  0x000000000000080f      0x1b8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-impure.o)
+ .debug_abbrev  0x00000000000009c7       0xcc /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
+ .debug_abbrev  0x0000000000000a93      0x23f /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__atexit.o)
+ .debug_abbrev  0x0000000000000cd2      0x2b2 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__call_atexit.o)
 
 .debug_aranges  0x0000000000000000      0x1e0
  .debug_aranges
@@ -538,28 +538,28 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a
  .debug_line    0x0000000000000d83      0x19e /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__atexit.o)
  .debug_line    0x0000000000000f21      0x28d /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__call_atexit.o)
 
-.debug_str      0x0000000000000000      0xd40
+.debug_str      0x0000000000000000      0xe55
  .debug_str     0x0000000000000000      0x2af build/Gpio.o
                                         0x2e8 (size before relaxing)
- .debug_str     0x00000000000002af       0xda build/main.o
-                                        0x25f (size before relaxing)
- .debug_str     0x0000000000000389       0x39 build/Uart_Builder.o
-                                        0x236 (size before relaxing)
- .debug_str     0x00000000000003c2       0x8d build/Uart_Driver.o
+ .debug_str     0x00000000000002af      0x1ef build/main.o
+                                        0x374 (size before relaxing)
+ .debug_str     0x000000000000049e       0x39 build/Uart_Builder.o
+                                        0x34b (size before relaxing)
+ .debug_str     0x00000000000004d7       0x8d build/Uart_Driver.o
                                         0x392 (size before relaxing)
- .debug_str     0x000000000000044f      0x12b build/system_stm32f4xx.o
+ .debug_str     0x0000000000000564      0x12b build/system_stm32f4xx.o
                                         0x369 (size before relaxing)
- .debug_str     0x000000000000057a      0x148 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-atexit.o)
+ .debug_str     0x000000000000068f      0x148 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-atexit.o)
                                         0x1e4 (size before relaxing)
- .debug_str     0x00000000000006c2       0xc8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-fini.o)
+ .debug_str     0x00000000000007d7       0xc8 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-fini.o)
                                         0x1dc (size before relaxing)
- .debug_str     0x000000000000078a      0x453 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-impure.o)
+ .debug_str     0x000000000000089f      0x453 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-impure.o)
                                         0x582 (size before relaxing)
- .debug_str     0x0000000000000bdd       0x96 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
+ .debug_str     0x0000000000000cf2       0x96 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-init.o)
                                         0x206 (size before relaxing)
- .debug_str     0x0000000000000c73       0x3b /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__atexit.o)
+ .debug_str     0x0000000000000d88       0x3b /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__atexit.o)
                                         0x5bc (size before relaxing)
- .debug_str     0x0000000000000cae       0x92 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__call_atexit.o)
+ .debug_str     0x0000000000000dc3       0x92 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a(lib_a-__call_atexit.o)
                                         0x5e8 (size before relaxing)
 
 .debug_frame    0x0000000000000000      0x304

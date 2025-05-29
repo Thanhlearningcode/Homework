@@ -2,7 +2,7 @@
 
 static Uart_Builder *setBaudrate(Uart_Builder * builder, uint32_t baudrate_)
 {
-    if (baudrate_<1200 || baudrate_>115200)
+    if (baudrate_<UART_BAUDRATE_9600 || baudrate_>UART_BAUDRATE_115200)
     {
      //   printf("Error: Invalid baud rate. Must be between 1200 and 115200.\n");
         return builder;
@@ -14,7 +14,7 @@ static Uart_Builder *setBaudrate(Uart_Builder * builder, uint32_t baudrate_)
 
 static Uart_Builder * setParity(Uart_Builder *builder, uint8_t parity_)
 {
-    if (parity_<0 || parity_ >2)
+    if (parity_<UART_PARITY_NONE || parity_ >UART_PARITY_EVEN)
     {
      //   printf("Error: Invalid parity. Must be 0 (None), 1 (Odd), or 2 (Even).\n");
         return builder;
@@ -25,7 +25,7 @@ static Uart_Builder * setParity(Uart_Builder *builder, uint8_t parity_)
 
 static Uart_Builder *setStopBits(Uart_Builder *builder, uint8_t stopBits_)
 {
-    if (stopBits_ != 1 && stopBits_ != 2)
+    if (stopBits_ != UART_STOPBITS_1 && stopBits_ != UART_STOPBITS_2)
     {
    //     printf("Error: Invalid stop bits. Must be 1 or 2.\n");
         return builder;
@@ -39,7 +39,7 @@ static Uart_Builder *setStopBits(Uart_Builder *builder, uint8_t stopBits_)
 
 // Function to set the data bits
 static Uart_Builder* setDataBits(Uart_Builder* builder, uint8_t dataBits_) {
-    if (dataBits_ != 8 && dataBits_ != 9) {
+    if (dataBits_ != UART_DATABITS_8 && dataBits_ != UART_DATABITS_9) {
      //   printf("Error: Invalid data bits. Must be 8 or 9.\n");
         return builder;
     }
@@ -57,10 +57,10 @@ static Uart_Config_t build(Uart_Builder * builder)
 // Function to initialize the Builder
 Uart_Builder UART_Builder_Init() {
     Uart_Builder builder;
-    builder.config.baudRate = 9600;   // Default baud rate
-    builder.config.parity = 0;       // Default parity: None
-    builder.config.stopBits = 1;     // Default stop bits: 1
-    builder.config.dataBits = 8;     // Default data bits: 8
+    builder.config.baudRate = UART_BAUDRATE_9600;   // Default baud rate
+    builder.config.parity = UART_PARITY_NONE;       // Default parity: None
+    builder.config.stopBits = UART_STOPBITS_1;     // Default stop bits: 1
+    builder.config.dataBits = UART_DATABITS_8;     // Default data bits: 8
     builder.setBaudrate = setBaudrate;
     builder.setParity = setParity;
     builder.setStopBits = setStopBits;
