@@ -29,7 +29,7 @@ Hoặc thủ công:
 ```bash
 st-flash write build/STM32F411.bin 0x8000000
 ```
-![image](https://github.com/user-attachments/assets/ad87fc04-613b-402b-ba64-e9200d1790f7)
+![image](https://github.com/user-attachments/assets/1670253a-54c1-489d-961d-8cd74996eafd)
 
 
 ---
