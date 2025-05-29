@@ -21,7 +21,7 @@ echo "===============================" >> "$LOG_FILE"
 echo "" >> "$LOG_FILE"
 
 # === Run build and capture exit status ===
-echo "🔨 Running make..."
+echo "Running make..."
 make all 2>&1 | tee -a "$LOG_FILE"
 MAKE_EXIT_CODE=${PIPESTATUS[0]}  # Bắt mã lỗi từ lệnh make (dù tee luôn thành công)
 
