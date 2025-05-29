@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/Sensor_Singleton_test.dir/Sensor_Singleton_test.cpp.o CMakeFiles/Sensor_Singleton_test.dir/home/thanh/Project/Baitap_Aphong/02.Designpattern/Singleton/Src/SensorManager_Singleton.c.o -o Sensor_Singleton_test  lib/libgtest.a lib/libgtest_main.a -lpthread lib/libgtest.a 
