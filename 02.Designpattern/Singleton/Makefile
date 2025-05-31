@@ -29,11 +29,12 @@ DEFINES  = -DSTM32F411xE
 INCLUDES = -I$(INC_DIR) -I$(CMSIS_DEVICE_INC) -I$(CMSIS_CORE_INC)
 
 # ==== Source Files ====
-SRC_APP    = $(wildcard $(SRC_DIR)/*.c)
+SRC_APP    = $(wildcard *.c) $(wildcard $(SRC_DIR)/*.c)
 SRC_CMSIS  = $(CMSIS_DEVICE_SRC)/Templates/system_stm32f4xx.c
 
 # ==== Object Files ====
-OBJ_APP     = $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(SRC_APP))
+OBJ_APP     = $(patsubst %.c,$(BUILD_DIR)/%.o,$(wildcard *.c)) \
+              $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(wildcard $(SRC_DIR)/*.c))
 OBJ_CMSIS   = $(patsubst $(CMSIS_DEVICE_SRC)/Templates/%.c,$(BUILD_DIR)/%.o,$(SRC_CMSIS))
 OBJ_STARTUP = $(BUILD_DIR)/startup_stm32f411vetx.o
 
@@ -76,9 +77,14 @@ $(BUILD_DIR):
 	fi; \
 	mkdir -p $(BUILD_DIR)
 
-# Compile .c from Src/
+# Compile .c in Src/
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c $(DEPS) | $(BUILD_DIR)
 	@echo "[Compiling] $<"
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Compile .c in root (e.g. main.c)
+$(BUILD_DIR)/%.o: %.c $(DEPS) | $(BUILD_DIR)
+	@echo "[Compiling root] $<"
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Compile CMSIS system file
@@ -94,7 +100,7 @@ $(BUILD_DIR)/%.o: $(STARTUP_DIR)/%.s | $(BUILD_DIR)
 # Link object files
 $(ELF): $(OBJ_ALL)
 	@echo "[Linking] $@"
-	$(LD) $(LDFLAGS) $^ -o $@
+	$(LD) $(LDFLAGS) $(OBJ_ALL) -o $@
 	$(SIZE) $@
 
 # Generate .bin from .elf
@@ -102,7 +108,7 @@ $(BIN): $(ELF)
 	@echo "[Objcopy] $@"
 	$(OBJCOPY) -O binary $< $@
 
-# Flash to STM32 (st-flash)
+# Flash to STM32
 flash: $(BIN)
 	st-flash write $(BIN) 0x8000000
 
