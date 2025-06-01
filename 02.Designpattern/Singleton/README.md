@@ -9,7 +9,8 @@ chmod +x build.sh
 
 File output: `build/STM32F411.bin`, `build/STM32F411.elf`.
 
-## Run googletest to check logic code
+
+## Run bash scripts to build test
 ```bash
 chmod +x build_test.sh
 ./build_test.sh
