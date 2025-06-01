@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = -I/home/thanh/Project/Design_Pattern/STM32/Builder/tests/../Inc -isystem /home/thanh/Project/Design_Pattern/STM32/Builder/tests/build/_deps/googletest-src/googletest/include -isystem /home/thanh/Project/Design_Pattern/STM32/Builder/tests/build/_deps/googletest-src/googletest
+C_INCLUDES = -I/home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/tests/../Inc -isystem /home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/tests/build/_deps/googletest-src/googletest/include -isystem /home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/tests/build/_deps/googletest-src/googletest
 
 C_FLAGS = 
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/thanh/Project/Design_Pattern/STM32/Builder/tests/../Inc -isystem /home/thanh/Project/Design_Pattern/STM32/Builder/tests/build/_deps/googletest-src/googletest/include -isystem /home/thanh/Project/Design_Pattern/STM32/Builder/tests/build/_deps/googletest-src/googletest
+CXX_INCLUDES = -I/home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/tests/../Inc -isystem /home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/tests/build/_deps/googletest-src/googletest/include -isystem /home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/tests/build/_deps/googletest-src/googletest
 
 CXX_FLAGS = 
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/thanh/Project/Design_Pattern/STM32/Builder/tests
+# Install script for directory: /home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/thanh/Project/Design_Pattern/STM32/Builder/tests/build/_deps/googletest-build/cmake_install.cmake")
+  include("/home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/tests/build/_deps/googletest-build/cmake_install.cmake")
 
 endif()
 
@@ -56,5 +56,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/thanh/Project/Design_Pattern/STM32/Builder/tests/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/tests/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

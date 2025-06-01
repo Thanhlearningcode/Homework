@@ -1,4 +1,4 @@
-# Install script for directory: /home/thanh/Project/Design_Pattern/STM32/Builder/tests/build/_deps/googletest-src
+# Install script for directory: /home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/tests/build/_deps/googletest-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/thanh/Project/Design_Pattern/STM32/Builder/tests/build/_deps/googletest-build/googlemock/cmake_install.cmake")
+  include("/home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/tests/build/_deps/googletest-build/googlemock/cmake_install.cmake")
 
 endif()
 

@@ -1,7 +1,7 @@
 # Make file names absolute:
 #
-get_filename_component(filename "/home/thanh/Project/Design_Pattern/STM32/Builder/tests/build/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.12.1.zip" ABSOLUTE)
-get_filename_component(directory "/home/thanh/Project/Design_Pattern/STM32/Builder/tests/build/_deps/googletest-src" ABSOLUTE)
+get_filename_component(filename "/home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/tests/build/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.12.1.zip" ABSOLUTE)
+get_filename_component(directory "/home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/tests/build/_deps/googletest-src" ABSOLUTE)
 
 message(STATUS "extracting...
      src='${filename}'

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thanh/Project/Design_Pattern/STM32/Builder/tests
+CMAKE_SOURCE_DIR = /home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/tests
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thanh/Project/Design_Pattern/STM32/Builder/tests/build
+CMAKE_BINARY_DIR = /home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/tests/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thanh/Project/Design_Pattern/STM32/Builder/tests/build/CMakeFiles /home/thanh/Project/Design_Pattern/STM32/Builder/tests/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/tests/build/CMakeFiles /home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/tests/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thanh/Project/Design_Pattern/STM32/Builder/tests/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/tests/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -260,29 +260,29 @@ Uart_Builder_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uart_builder_test.dir/build.make CMakeFiles/uart_builder_test.dir/Uart_Builder_test.cpp.s
 .PHONY : Uart_Builder_test.cpp.s
 
-home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.o: home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.c.o
-.PHONY : home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.o
+home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.o: home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.c.o
+.PHONY : home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.o
 
 # target to build an object file
-home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/uart_builder_test.dir/build.make CMakeFiles/uart_builder_test.dir/home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.c.o
-.PHONY : home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.c.o
+home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/uart_builder_test.dir/build.make CMakeFiles/uart_builder_test.dir/home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.c.o
+.PHONY : home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.c.o
 
-home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.i: home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.c.i
-.PHONY : home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.i
+home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.i: home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.c.i
+.PHONY : home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.i
 
 # target to preprocess a source file
-home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/uart_builder_test.dir/build.make CMakeFiles/uart_builder_test.dir/home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.c.i
-.PHONY : home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.c.i
+home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/uart_builder_test.dir/build.make CMakeFiles/uart_builder_test.dir/home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.c.i
+.PHONY : home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.c.i
 
-home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.s: home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.c.s
-.PHONY : home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.s
+home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.s: home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.c.s
+.PHONY : home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.s
 
 # target to generate assembly for a file
-home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/uart_builder_test.dir/build.make CMakeFiles/uart_builder_test.dir/home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.c.s
-.PHONY : home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.c.s
+home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/uart_builder_test.dir/build.make CMakeFiles/uart_builder_test.dir/home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.c.s
+.PHONY : home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.c.s
 
 # Help Target
 help:
@@ -305,9 +305,9 @@ help:
 	@echo "... Uart_Builder_test.o"
 	@echo "... Uart_Builder_test.i"
 	@echo "... Uart_Builder_test.s"
-	@echo "... home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.o"
-	@echo "... home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.i"
-	@echo "... home/thanh/Project/Design_Pattern/STM32/Builder/Src/Uart_Builder.s"
+	@echo "... home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.o"
+	@echo "... home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.i"
+	@echo "... home/thanh/Project/Baitap_Aphong/02.Designpattern/Builder/Src/Uart_Builder.s"
 .PHONY : help
 
 
