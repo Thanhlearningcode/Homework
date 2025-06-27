@@ -1,0 +1,10 @@
+#ifndef _CONFIG_H_
+#define _CONFIG_H_
+
+#define MOISTURE_MIN_THRESHOLD 30 //< 30%
+#define MOISTURE_MAX_THRESHOLD 70  //< %
+#define MAX_WATERING_TIME_SEC 15   
+#define SENSOR_CHECK_INTERVAL_MS 5000
+#define MANUAL_WATER_DURATION_SEC 10
+
+#endif /* _CONFIG_H_ */

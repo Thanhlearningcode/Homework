@@ -5,13 +5,13 @@ typedef enum
 {
     MODE_AUTO = 0,
     MODE_MANUAL
-} SystemState;
+} System_State;
 
 typedef enum
 {
     PUMP_OFF = 0,
     PUMP_ON
-} PumpState;
+} Pump_State;
 
 typedef enum 
 {
@@ -19,7 +19,7 @@ typedef enum
     LED_WATERING,
     LED_LOW_MOISTURE_ALERT,
     LED_ERROR
-} LEDStatus;
+} LED_Status;
 
 typedef struct 
 {
@@ -32,7 +32,7 @@ typedef struct {
     int moisture_max_threshold;
     int watering_duration_sec;
     int check_interval_sec;
-    SystemState mode;
+    System_State mode;
 } System_Config;
 
 #endif /* _SYSTEM_STATUS_H_ */
