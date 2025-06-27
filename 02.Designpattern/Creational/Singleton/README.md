@@ -67,3 +67,18 @@ continue
 
 ---
 
+# Terminal 1
+openocd -f interface/stlink.cfg -f target/stm32f4x.cfg
+
+# Terminal 2
+cd path/to/project
+gdb-multiarch build/STM32F411.elf
+> target remote localhost:3333
+> file build/STM32F411.elf
+> monitor reset halt
+> break main
+> continue
+file ~/Project/Baitap_Aphong/02.Designpattern/Creational/Builder/build/STM32F411.elf
+monitor reset halt
+break main
+continue
