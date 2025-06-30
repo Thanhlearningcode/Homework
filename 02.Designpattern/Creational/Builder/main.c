@@ -3,7 +3,8 @@
 #include "Uart_Builder.h"
 #include <stdio.h>
 
-void delay(volatile uint32_t count) {
+void delay(volatile uint32_t count) 
+{
     while(count--) {
         __NOP();
     }
