@@ -52,6 +52,7 @@ void Logger_Close(void)
     {
         fclose(log_file);
         log_file = NULL;
+        printf("File is closed\n");
     }
 }
 
@@ -67,18 +68,18 @@ void Logger_Log(LogLevel level, const char* file, int line, const char* format, 
     va_list args;
     va_start(args, format);
 
-    fprintf(output, "[%s] [%s] [%s:%d] - ", timestamp, Level_To_String(level), file, line);
+    fprintf (output, "[%s] [%s] [%s:%d] - ", timestamp, Level_To_String(level), file, line);
     vfprintf(output, format, args);
-    fprintf(output, "\n");
-    fflush(output);
+    fprintf (output, "\n");
+    fflush  (output);
 
     if (log_file)
      {
-        fprintf(log_file, "[%s] [%s] [%s:%d] - ", timestamp, Level_To_String(level), file, line);
+        fprintf (log_file, "[%s] [%s] [%s:%d] - ", timestamp, Level_To_String(level), file, line);
         va_start(args, format);  
         vfprintf(log_file, format, args);
-        fprintf(log_file, "\n");
-        fflush(log_file);             //< This functions is referened from chatgpt
+        fprintf (log_file, "\n");
+        fflush  (log_file);             //< This functions is referened from chatgpt
     }
 
     va_end(args);

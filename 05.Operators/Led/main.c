@@ -21,7 +21,7 @@ int main()
         }
     }
 
-    // Đặt màu
+    /* Setting color*/
     Led_Set_Pixels_Colors(0, 255, 0, 0);     // Pixel 0: Red
     Led_Set_Pixels_Colors(9, 0, 0, 255);     // Pixel 9: Blue
     Led_Set_Pixels_Colors(4, 255, 255, 255); // Pixel 4: White
@@ -32,7 +32,7 @@ int main()
     printf("Pixel 4 color:  0x%08X\n", buffer[4]);  // Expect 0x00FFFFFF
     printf("Pixel 9 color:  0x%08X\n", buffer[9]);  // Expect 0x000000FF
 
-    // Fill toàn bộ dải LED thành màu Xanh lá (Green)
+    
     Led_Fill(0, 255, 0); // Green
     buffer = Get_Led_Buffer();
     printf("\nAfter fill with Green:\n");
@@ -41,7 +41,6 @@ int main()
         printf("Pixel %zu color: 0x%08X\n", i, buffer[i]); // Expect 0x00FF0000
     }
 
-    // Giải phóng bộ nhớ
     Led_Shutdown();
     printf("LED strip shutdown.\n");
 
