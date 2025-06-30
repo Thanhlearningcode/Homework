@@ -48,4 +48,4 @@ make clean
 
 Result:
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/78630f2c-fe67-4c8f-8441-7b8cb197b911)
