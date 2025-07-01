@@ -43,7 +43,7 @@ void Led_Set_Pixels_Colors (size_t index, uint8_t r, uint8_t g, uint8_t b)
         printf("Error to create Pixels\n");
     }
 
-    uint32_t set_color = MAKE_COLOR(r,b,g);
+    uint32_t set_color = MAKE_COLOR(r,g,b);
     led_buffer[index] = set_color;
 }
 
@@ -55,7 +55,7 @@ void Led_Fill (uint8_t r, uint8_t g, uint8_t b)
         return;
     }
 
-    const uint32_t set_color = MAKE_COLOR(r,b,g);
+    const uint32_t set_color = MAKE_COLOR(r,g,b);
     for (size_t i=0;i<number_pixcels;i++)
     {
         *(led_buffer + i) = set_color;

@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "stddef.h": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c"
+    },
+    "cmake.sourceDirectory": "/home/thanh/Project/Baitap_Aphong/02.Designpattern/Creational/Builder/CMSIS/DSP/Source/BayesFunctions"
+}

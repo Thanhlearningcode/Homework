@@ -10,6 +10,7 @@ typedef enum
     NOT_OK = 0,
     OK,
 } Led_State;
+
 bool Led_Init (size_t num_pixels);
 void Led_Shutdown ();
 void Led_Set_Pixels_Colors (size_t index, uint8_t r, uint8_t g, uint8_t b);
