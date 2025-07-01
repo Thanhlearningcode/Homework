@@ -4,7 +4,6 @@
 #include <stdarg.h>
 #include <time.h>
 
-
 typedef enum 
 {
     LOG_EMERGENCY = 0,

@@ -2,83 +2,77 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static uint32_t* led_buffer = NULL;
-static size_t led_num_pixels = 0;
+#define MAKE_COLOR(r,g,b) \
+        (uint32_t)r |(uint32_t)g <<8 | (uint32_t)b << 16 
 
+static uint32_t* led_buffer = NULL;
+static size_t    number_pixcels = 0;
 bool Led_Init (size_t num_pixels)
 {
     if (num_pixels == 0)
     {
-        printf("Paremeters is nothing = 0\n");
+        printf("Need Parameter\n");
         return NOT_OK;
     }
 
     led_buffer = (uint32_t*)calloc(num_pixels,num_pixels*sizeof(uint32_t));
-    led_num_pixels = num_pixels;
+    number_pixcels = num_pixels;
 
-    for (size_t i=0; i<led_num_pixels; i++)
-    {
-        led_buffer[i] = 0;
-    }
     if (!led_buffer)
     {
         printf("Led Buffer is not created\n");
         return NOT_OK;
     }
- 
     return OK;
 }
 
-void Led_Shutdown()
+void Led_Shutdown() 
 {
-    if(led_buffer)  //< Check led_buffer is exist 
+    if (led_buffer)
     {
         free(led_buffer);
         led_buffer = NULL;
-        printf("Led buffer is deleted\n");
+        printf("Deleted buffer\n");
     }
 }
+
 void Led_Set_Pixels_Colors (size_t index, uint8_t r, uint8_t g, uint8_t b)
 {
-    if (!led_buffer || (index > led_num_pixels))
+    if (!led_buffer || index > number_pixcels)
     {
-        printf("Check led init\n");
-        return ;
+        printf("Error to create Pixels\n");
     }
 
-    uint32_t buffer_pixel = r  | g << 8 | b << 16;
-    led_buffer[index] = buffer_pixel;
+    uint32_t set_color = MAKE_COLOR(r,b,g);
+    led_buffer[index] = set_color;
 }
 
 void Led_Fill (uint8_t r, uint8_t g, uint8_t b)
 {
-     if (!led_buffer )
+    if (!led_buffer)
     {
-        printf("Check led init\n");
-        return ;
+        printf("Error to create Pixels\n");
+        return;
     }
 
-    const uint32_t set_color = r  | g << 8 | b << 16;
-    for (size_t i=0;i<=led_num_pixels;i++)
+    const uint32_t set_color = MAKE_COLOR(r,b,g);
+    for (size_t i=0;i<number_pixcels;i++)
     {
-        *(led_buffer +i) = set_color;
+        *(led_buffer + i) = set_color;
     }
 }
 
-void Led_Clear ()
+void Led_Clear()
 {
     Led_Fill(0,0,0);
-    // const uint32_t set_color = 0;
-    // for (int i=0;i<=led_num_pixels;i++)
-    // {
-    //     *(led_buffer +i) = set_color;
-    // }
 }
 
-uint32_t* Get_Led_Buffer() {
-    return led_buffer;
+const uint32_t* Get_Led_Buffer()
+{
+    return (uint32_t*)led_buffer;
 }
 
-size_t Get_Count_Led_Pixel() {
-    return led_num_pixels;
+size_t Get_Count_Led_Pixel()
+{
+    return number_pixcels;
 }
