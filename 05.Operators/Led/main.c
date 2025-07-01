@@ -26,7 +26,7 @@ int main()
     Led_Set_Pixels_Colors(9, 0, 0, 255);     // Pixel 9: Blue
     Led_Set_Pixels_Colors(4, 255, 255, 255); // Pixel 4: White
 
-    // Lấy buffer và in kết quả
+    // Get buffer và in log
     buffer = Get_Led_Buffer();
     printf("Pixel 0 color:  0x%08X\n", buffer[0]);  // Expect 0x0000FF00
     printf("Pixel 4 color:  0x%08X\n", buffer[4]);  // Expect 0x00FFFFFF
