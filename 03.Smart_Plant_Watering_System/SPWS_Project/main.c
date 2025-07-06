@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <unistd.h> // sleep()
+#include <unistd.h>
 #include "Config.h"
 #include "System_Status.h"
 #include "Sensors.h"
@@ -7,50 +7,54 @@
 #include "Buttons.h"
 #include "Watering_Logic.h"
 
-int main(int argc, char const* argv[])
+int main(void)
 {
-    System_Config config = 
-    {
+    System_Config config = {
         .moisture_min_threshold = MOISTURE_MIN_THRESHOLD,
         .moisture_max_threshold = MOISTURE_MAX_THRESHOLD,
-        .watering_duration_sec  = SENSOR_CHECK_INTERVAL_MS,
-        .check_interval_sec     = MANUAL_WATER_DURATION_SEC,
+        .watering_duration_sec  = MANUAL_WATER_DURATION_SEC,
+        .check_interval_sec     = SENSOR_CHECK_INTERVAL_MS,
         .mode                   = MODE_AUTO
     };
 
     Sensor_Init();
     Actuators_Pumb* pump = Pump_Init();
-    Button_Systems* _btn = Buttons_Init();
-    Led_Init();
+    Button_Systems* buttons = Buttons_Init();
+    Led_Systems* led_state = Led_Init();
     Logic_Init(&config);
 
-    if (!pump || !_btn) 
+    if (!pump || !buttons || !led_state) 
     {
-        printf("Init failed!\n");
+        printf("[ERROR] Init failed!\n");
         return -1;
     }
 
     while (1) 
     {
-        /*Giả sử nút số 0 là nút chuyển chế độ*/ 
-        if (Auto_Toggle_pressed(_btn, 0)) 
+        if (Auto_Toggle_pressed(buttons, 0)) 
         {
             config.mode = (config.mode == MODE_AUTO) ? MODE_MANUAL : MODE_AUTO;
-            printf("\n[INFO] Chuyển chế độ: %s\n", config.mode == MODE_AUTO ? "TỰ ĐỘNG" : "THỦ CÔNG");
-            turn_Pump(pump, 0, PUMP_OFF); // Tắt bơm số 0
+            printf("\n[INFO] Switched mode: %s\n", config.mode == MODE_AUTO ? "AUTO" : "MANUAL");
+            turn_Pump(pump, 0, PUMP_OFF);
+            set_Led_Status(led_state, LED_NORMAL); // reset led
         }
 
         if (config.mode == MODE_AUTO) 
         {
             SensorData data = read_Sensors();
-            process_Watering_Logic(&config, &data, pump);
-        } else 
+            process_Watering_Logic(&config, &data, pump, led_state);
+        } 
+        else 
         {
-            handle_Manual_Override(&config, pump, _btn);
+            handle_Manual_Override(&config, pump, buttons, led_state);
         }
 
-        sleep(1); // Thêm delay để mô phỏng
+        sleep(1);
     }
+
+    free(pump);
+    free(buttons);
+    free(led_state);
 
     return 0;
 }
