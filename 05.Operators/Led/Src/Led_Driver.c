@@ -65,7 +65,7 @@ void Led_Fill (uint8_t r, uint8_t g, uint8_t b)
 
 void Led_Clear()
 {
-    Led_Fill(0,0,0);
+    Led_Fill(DEFAULT_LED,DEFAULT_LED,DEFAULT_LED);
 }
 
 const uint32_t* Get_Led_Buffer()
