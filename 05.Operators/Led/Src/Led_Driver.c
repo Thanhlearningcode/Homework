@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define DEFAULT_LED 0
 #define MAKE_COLOR(r,g,b) \
         (uint8_t)r |(uint8_t)g <<8 | (uint8_t)b << 16 
 
