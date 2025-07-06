@@ -7,15 +7,15 @@
 #include "Buttons.h"
 #include "Watering_Logic.h"
 
-int main(void)
+int main(int argc, char const* argv[])
 {
     System_Config config = 
     {
         .moisture_min_threshold = MOISTURE_MIN_THRESHOLD,
         .moisture_max_threshold = MOISTURE_MAX_THRESHOLD,
-        .watering_duration_sec = SENSOR_CHECK_INTERVAL_MS,
-        .check_interval_sec = MANUAL_WATER_DURATION_SEC,
-        .mode = MODE_AUTO
+        .watering_duration_sec  = SENSOR_CHECK_INTERVAL_MS,
+        .check_interval_sec     = MANUAL_WATER_DURATION_SEC,
+        .mode                   = MODE_AUTO
     };
 
     Sensor_Init();
@@ -40,10 +40,12 @@ int main(void)
             turn_Pump(pump, 0, PUMP_OFF); // Tắt bơm số 0
         }
 
-        if (config.mode == MODE_AUTO) {
+        if (config.mode == MODE_AUTO) 
+        {
             SensorData data = read_Sensors();
             process_Watering_Logic(&config, &data, pump);
-        } else {
+        } else 
+        {
             handle_Manual_Override(&config, pump, _btn);
         }
 

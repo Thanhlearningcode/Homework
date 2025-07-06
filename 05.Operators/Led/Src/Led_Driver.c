@@ -3,10 +3,11 @@
 #include <stdlib.h>
 
 #define MAKE_COLOR(r,g,b) \
-        (uint32_t)r |(uint32_t)g <<8 | (uint32_t)b << 16 
+        (uint8_t)r |(uint8_t)g <<8 | (uint8_t)b << 16 
 
 static uint32_t* led_buffer = NULL;
 static size_t    number_pixcels = 0;
+
 bool Led_Init (size_t num_pixels)
 {
     if (num_pixels == 0)

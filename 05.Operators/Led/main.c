@@ -12,7 +12,7 @@ int main()
 
     printf("LED strip initialized with %zu pixels.\n", Get_Count_Led_Pixel());
 
-     uint32_t* buffer = Get_Led_Buffer();
+    uint32_t* buffer = Get_Led_Buffer();
     for (size_t i = 0; i < Get_Count_Led_Pixel(); ++i)
      {
         if (buffer[i] != 0) 
