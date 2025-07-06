@@ -2,13 +2,14 @@
 #define ACTUATORS_H
 
 #include "System_Status.h"
+#include <stdbool.h>
+#include <stdlib.h>
 
-void Pump_Init(void);
-void turn_Pump_On(void);
-void turn_Pump_Off(void);
-Pump_State get_Pump_State(void);
+Actuators_Pumb* Pump_Init(void);
+void turn_Pump(Actuators_Pumb* _pump,int index, Pump_State state );
+Pump_State  get_Pump_State(Actuators_Pumb* _pump,int index);
 
 void Led_Init(void);
-void set_Led_Status(LED_Status status);
-
+void set_Led_Status(Led_Systems* _led, LED_Status led_status);
+LED_Status get_Led_Status(Led_Systems* _led);
 #endif // ACTUATORS_H
