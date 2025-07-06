@@ -39,14 +39,16 @@ Vi điều khiển không gửi tín hiệu analog riêng biệt mà chỉ cần
 - Giải phóng bộ nhớ.
 
 ---
-
 ## ⚙️ Build & chạy
 ```bash
 make
 ./LED
 make clean
+```
 
-Result:
+## Result:
 
-![image](https://github.com/user-attachments/assets/81bab962-ee8e-41b7-b464-dc1d45ffe0e9)
+![image](https://github.com/user-attachments/assets/ce3a6f79-257e-4f7b-8e21-7da5dd277547)
+
+
 
