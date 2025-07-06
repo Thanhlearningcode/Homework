@@ -10,6 +10,8 @@ int main()
         return -1;
     }
 
+    atexit(Led_Shutdown);
+
     printf("LED strip initialized with %zu pixels.\n", Get_Count_Led_Pixel());
 
     uint32_t* buffer = Get_Led_Buffer();
@@ -41,7 +43,6 @@ int main()
         printf("Pixel %zu color: 0x%08X\n", i, buffer[i]); // Expect 0x00FF0000
     }
 
-    Led_Shutdown();
     printf("LED strip shutdown.\n");
 
     return 0;

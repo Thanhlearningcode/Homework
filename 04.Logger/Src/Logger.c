@@ -31,7 +31,8 @@ static void Get_Current_Time (char* buffer, size_t size)
 void Logger_Init(LogLevel level, const char* path_file)
 {
     current_level = level;
-    if (path_file) {
+    if (path_file) 
+    {
         
         char command[128];
         snprintf(command, sizeof(command), "mkdir -p %s", "Log");
