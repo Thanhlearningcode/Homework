@@ -2,15 +2,16 @@
 #include "Controller.h"
 #include "View.h"
 #include <unistd.h> 
-int main() {
-    // Khởi tạo model
+int main() 
+{
+    /* Init model */
     Model_Infor model = {0};
+
     while(1)
     {
-    // Controller cập nhật dữ liệu hệ thống
     Controller_Update_System(&model);
 
-    // View hiển thị dữ liệu ra dashboard
+    /*Display information*/
     Display_Dashboard(&model);
 
     sleep(3);
