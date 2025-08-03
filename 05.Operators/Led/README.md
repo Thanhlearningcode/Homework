@@ -18,15 +18,6 @@ Vi điều khiển không gửi tín hiệu analog riêng biệt mà chỉ cần
 
 ---
 
-## 📁 Cấu trúc dự án
-.
-├── main.c # Chương trình kiểm thử
-├── Src/
-│ └── led_driver.c # Triển khai driver
-├── Inc/
-│ └── led_driver.h # API công khai
-├── Makefile
-└── README.md
 
 
 ---
