@@ -6,6 +6,7 @@
 
 #define BUTTON_COUNT     2
 #define PUMP_WATER_COUNT 1
+#define LED_COUNT        1
 typedef enum 
 {
   FAIL = 0,
@@ -51,8 +52,7 @@ typedef struct
 
 typedef struct 
 {
-    bool status;
-    int index;
+    LED_Status leds[LED_COUNT];
 } Led_Systems;
 
 typedef struct 

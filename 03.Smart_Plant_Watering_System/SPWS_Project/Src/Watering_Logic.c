@@ -48,7 +48,8 @@ void handle_Manual_Override(System_Config* config, Actuators_Pumb* pump,
     static time_t manual_start_time = 0;
     static int is_manual_watering = 0;
 
-    if (!config || !pump || !button || !led) {
+    if (!config || !pump || !button || !led) 
+    {
         printf("[ERROR] Null pointer in handle_Manual_Override\n");
         return;
     }
