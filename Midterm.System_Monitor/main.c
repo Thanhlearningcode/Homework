@@ -1,20 +1,36 @@
 #include "System_Infor.h"
 #include "Controller.h"
 #include "View.h"
-#include <unistd.h> 
-int main() 
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(void)
 {
-    /* Init model */
-    Model_Infor model = {0};
-
-    while(1)
+    /* Initialize model  */
+    Model_Infor* model_monitor = (Model_Infor*)calloc(1, sizeof(Model_Infor));
+    if (!model_monitor)
     {
-    Controller_Update_System(&model);
-
-    /*Display information*/
-    Display_Dashboard(&model);
-
-    sleep(3);
+        fprintf(stderr, "Failed to allocate memory for model_monitor\n");
+        return 1;
     }
-     return 0;
+
+    while (1)
+    {
+        Controller_Update_System(model_monitor);
+
+        /* Display system information */
+        View_Display_Dashboard(model_monitor);
+
+        sleep(3);
+    }
+
+    /* Clean up memory  */
+    if (model_monitor)
+    {
+        free(model_monitor);
+        model_monitor = NULL;
+    }
+
+    return 0;
 }

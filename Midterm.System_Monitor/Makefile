@@ -5,13 +5,13 @@ TARGET = system_monitor
 CC = gcc
 
 # CFLAGS: cảnh báo và bao gồm thư mục header
-CFLAGS = -Wall -IInc -IInc/MVP -IInc/System 
+CFLAGS = -Wall -IInc -IInc/MVP -IInc/System
 
 # Source files
 SRCS = main.c \
        Src/MVP/Controller.c \
        Src/MVP/Model.c \
-       Src/MVP/View.c \
+       Src/MVP/View.c
 
 # Object files
 OBJS = $(SRCS:.c=.o)
@@ -27,9 +27,15 @@ $(TARGET): $(OBJS)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+# Rule thêm: build với AddressSanitizer
+debug: CFLAGS += -g -fsanitize=address -fno-omit-frame-pointer
+debug: LDFLAGS = -fsanitize=address
+debug: clean
+	$(CC) $(CFLAGS) $(SRCS) -o $(TARGET) $(LDFLAGS)
+
 # Dọn file biên dịch
 clean:
 	rm -f $(OBJS) $(TARGET)
 
 # Phony targets để tránh trùng tên file
-.PHONY: all clean
+.PHONY: all clean debug

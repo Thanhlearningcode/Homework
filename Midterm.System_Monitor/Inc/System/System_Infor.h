@@ -13,6 +13,7 @@
 #define NUMBER_CHARACTERS        32
 #define KERNEL_VERSION           64
 
+
 typedef struct 
 {
     float used;

@@ -2,7 +2,14 @@
 #define _VIEW_H_
 
 #include "System_Infor.h"
+//#include "Logger.h"
 
-void Display_Dashboard(Model_Infor* model);
+typedef enum 
+{   
+    VIEW_ERROR,
+    VIEW_SUCCESS,
+} View_Status;
+
+View_Status View_Display_Dashboard(Model_Infor* model);
 
 #endif /* _VIEW_H_*/
