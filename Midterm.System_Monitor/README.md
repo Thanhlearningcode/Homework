@@ -42,7 +42,7 @@ make
 # Chạy chương trình
 ./system_monitor
 ```
-<img width="1156" height="1200" alt="image" src="https://github.com/user-attachments/assets/ac1c79a5-9d00-46d9-85b4-a30472253272" />
+<img width="1189" height="1340" alt="image" src="https://github.com/user-attachments/assets/f7f2a7dd-310e-451c-b8de-53929f4ca5c9" />
 
 ## ⏱️ Giới hạn hiện tại
 - Hiển thị bằng dòng lệnh, chưa có giao diện đồ hoạ
