@@ -36,6 +36,9 @@ Midterm.System_Monitor/
 ## 🚀 Hướng dẫn build
 
 ```bash
+# Debug 
+make denig
+
 # Biên dịch chương trình
 make
 
