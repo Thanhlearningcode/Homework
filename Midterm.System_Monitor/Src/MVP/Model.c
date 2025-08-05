@@ -6,7 +6,8 @@
 Model_Status Model_Process(Model_Infor* model)
 {
     if (!model)
-    {
+    {   
+        Log_Message(LOG_ERROR,"[Model]-Model no exist\n");
         return MODEL_ERROR;
     }
 

@@ -2,7 +2,7 @@
 #define _VIEW_H_
 
 #include "System_Infor.h"
-//#include "Logger.h"
+#include "Logger.h"
 
 typedef enum 
 {   

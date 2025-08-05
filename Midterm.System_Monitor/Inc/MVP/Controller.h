@@ -2,7 +2,7 @@
 #define _CONTROLLER_H_
 
 #include "System_Infor.h"
-#include "View.h"
+#include "Logger.h"
 
 typedef enum 
 {   

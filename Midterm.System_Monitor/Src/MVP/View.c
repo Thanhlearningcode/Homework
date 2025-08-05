@@ -4,6 +4,7 @@ View_Status View_Display_Dashboard(Model_Infor* model)
 {
     if(!model)
     {
+       Log_Message(LOG_ERROR,"[View]-Model no exist\n");
        return VIEW_ERROR; 
     }
 

@@ -1,0 +1,6 @@
+[2025-08-05 15:03:41] [ERROR] [Src/MVP/Controller.c:8] - [Controllẻ]-Model no exist
+
+[2025-08-05 15:03:44] [ERROR] [Src/MVP/Controller.c:8] - [Controllẻ]-Model no exist
+
+[2025-08-05 15:03:47] [ERROR] [Src/MVP/Controller.c:8] - [Controllẻ]-Model no exist
+

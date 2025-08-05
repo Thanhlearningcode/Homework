@@ -2,6 +2,7 @@
 #define _MODEL_H_
 
 #include "System_Infor.h"
+#include "Logger.h"
 
 typedef enum 
 {   
