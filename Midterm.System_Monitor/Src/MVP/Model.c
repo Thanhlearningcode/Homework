@@ -19,7 +19,7 @@ Model_Status Model_Process(Model_Infor* model)
     for (int i = 0; i < CPU_TOP_PROCESS_NUMBERS; i++)
     {
         strncpy(model->cpu.top_process[i], cpu_processes[i], sizeof(model->cpu.top_process[i]) - 1);
-        model->cpu.top_process[i][sizeof(model->cpu.top_process[i]) - 1] = '\0'; // ensure null-termination
+        model->cpu.top_process[i][sizeof(model->cpu.top_process[i]) - 1] = '\0'; 
     }
 
           /*Simulate RAM data*/ 
@@ -53,7 +53,7 @@ Model_Status Model_Process(Model_Infor* model)
     model->sytem.uptime += 1;
     strncpy(model->sytem.kernel_version, "6.5.0-31-generic", sizeof(model->sytem.kernel_version) - 1);
     model->sytem.kernel_version[sizeof(model->sytem.kernel_version) - 1] = '\0';
-    
+
     model->sytem.load_avg[0] = (float)(rand() % 100) / 100.0;
     model->sytem.load_avg[1] = (float)(rand() % 100) / 100.0;
     model->sytem.load_avg[2] = (float)(rand() % 100) / 100.0;

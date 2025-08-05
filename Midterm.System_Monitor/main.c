@@ -1,6 +1,5 @@
 #include "System_Infor.h"
 #include "Controller.h"
-#include "View.h"
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -18,10 +17,6 @@ int main(void)
     while (1)
     {
         Controller_Update_System(model_monitor);
-
-        /* Display system information */
-        View_Display_Dashboard(model_monitor);
-
         sleep(3);
     }
 
