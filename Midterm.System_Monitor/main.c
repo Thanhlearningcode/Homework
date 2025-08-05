@@ -21,9 +21,9 @@ int main(void)
     {   
         if (Controller_Update_System(model_monitor)!= MODEL_SUCCESS)
         {
-            Log_Message(LOG_ERROR, "Controller update failed\n\n");       
+            Log_Message(LOG_ERROR, "[Controller]- update failed\n\n");       
         }
-        sleep(3);
+        sleep(3); 
     }
 
     /* Clean up memory  */
